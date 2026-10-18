@@ -204,6 +204,7 @@ h1 {
   .special-card {
     height: 240px;
     padding: 24px;
+    border-radius: 80px 10px 80px 10px;
   }
 
   .special-title {
