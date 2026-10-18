@@ -72,6 +72,7 @@ h1 {
 }
 
 .hero-sec {
+  margin-top: 50px;
   padding: 0px 80px;
   min-height: 430px;
   background-color: var(--color-primary);
@@ -158,24 +159,40 @@ h1 {
 }
 
 .special-card {
-  min-height: 307px;
+  position: relative;
+  overflow: hidden;
+  height: 307px;
   padding: 30px 40px;
   background-color: var(--color-primary);
   border-radius: 120px 10px 120px 10px;
 }
 
+.special-card > div {
+  position: relative;
+  z-index: 1;
+  width: 48%;
+}
+
+.special-card--blue {
+  background-color: var(--color-blue);
+}
+
 .special-card-img {
   display: block;
-  width: 42%;
-  height: auto;
-  flex: 0 0 42%;
-  align-self: stretch;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
   object-fit: contain;
 }
 
 .special-card .special-card-img--wide {
-  width: 50%;
-  flex-basis: 50%;
+  width: 40%;
+}
+
+.special-card--image-wide > div {
+  width: 44%;
 }
 
 .special-title {
@@ -185,7 +202,7 @@ h1 {
 
 @media (max-width: 767.98px) {
   .special-card {
-    min-height: 240px;
+    height: 240px;
     padding: 24px;
   }
 
@@ -194,9 +211,15 @@ h1 {
   }
 
   .special-card-img {
-    width: 45%;
-    height: auto;
-    flex-basis: 45%;
+    width: 40%;
+  }
+
+  .special-card .special-card-img--wide {
+    width: 40%;
+  }
+
+  .special-card--image-wide > div {
+    width: 40%;
   }
 
   .special-card .outline-btn {
@@ -355,8 +378,17 @@ h1 {
   }
 }
 
+.see-more{
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover{
+    color: var(--color-primary);
+  }
+}
+
 footer {
-  margin-top: 60px;
+  margin-top: 150px;
   padding-block: 48px;
   background-color: var(--color-primary-white);
 }
